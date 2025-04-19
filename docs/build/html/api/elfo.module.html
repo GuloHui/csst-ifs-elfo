@@ -1,0 +1,889 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>elfo &mdash; csst-ifs-elfo 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="API" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            csst-ifs-elfo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Usage:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">黄河之水天上来test</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">elfo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.downward"><code class="docutils literal notranslate"><span class="pre">downward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.leftward"><code class="docutils literal notranslate"><span class="pre">leftward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_down"><code class="docutils literal notranslate"><span class="pre">process_down()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_i"><code class="docutils literal notranslate"><span class="pre">process_i()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_i_refit"><code class="docutils literal notranslate"><span class="pre">process_i_refit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_j"><code class="docutils literal notranslate"><span class="pre">process_j()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_j_refit"><code class="docutils literal notranslate"><span class="pre">process_j_refit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_left"><code class="docutils literal notranslate"><span class="pre">process_left()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_right"><code class="docutils literal notranslate"><span class="pre">process_right()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_spectrum"><code class="docutils literal notranslate"><span class="pre">process_spectrum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_spectrum_down"><code class="docutils literal notranslate"><span class="pre">process_spectrum_down()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_spectrum_left"><code class="docutils literal notranslate"><span class="pre">process_spectrum_left()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_spectrum_right"><code class="docutils literal notranslate"><span class="pre">process_spectrum_right()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_spectrum_up"><code class="docutils literal notranslate"><span class="pre">process_spectrum_up()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.process_up"><code class="docutils literal notranslate"><span class="pre">process_up()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.rightward"><code class="docutils literal notranslate"><span class="pre">rightward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.safe_open_fits"><code class="docutils literal notranslate"><span class="pre">safe_open_fits()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elfo.upward"><code class="docutils literal notranslate"><span class="pre">upward()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">csst-ifs-elfo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="api.html">API</a></li>
+      <li class="breadcrumb-item active">elfo</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/elfo.module.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-elfo">
+<span id="elfo"></span><h1>elfo<a class="headerlink" href="#module-elfo" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.downward">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">downward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jmin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jmax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.downward" title="Link to this definition"></a></dt>
+<dd><p>Generate the fitting parameter file for the specified coordinates.</p>
+<p>This function selects the best-fitting result with the smallest chi-square value
+from the spectral fitting of adjacent row (i-1) and columns (jmin to jmax)
+in the IFU data and generates the fitting parameter file for the corresponding (i, j) spatial pixel spectrum.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>jmin<span class="classifier">int</span></dt><dd><p>The minimum <cite>j</cite> coordinate for the range of adjacent columns to consider.</p>
+</dd>
+<dt>jmax<span class="classifier">int</span></dt><dd><p>The maximum <cite>j</cite> coordinate for the range of adjacent columns to consider.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The path to the output directory where the fitting parameter files will be saved.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+<dl>
+<dt>chi2<span class="classifier">float</span></dt><dd><p>The chi-square value of the best-fitting spectrum.</p>
+</dd>
+<dt>par_cube_choosen<span class="classifier"><cite>np.recarray</cite></span></dt><dd><p>The parameter cube corresponding to the best-fitting spectrum.</p>
+</dd>
+<dt>coords<span class="classifier">tuple</span></dt><dd><p>The coordinates <cite>(i_coord, j_coord)</cite> of the best-fitting spectrum.</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chi2</span><span class="p">,</span> <span class="n">par_cube</span><span class="p">,</span> <span class="n">coords</span> <span class="o">=</span> <span class="n">downward</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.leftward">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">leftward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.leftward" title="Link to this definition"></a></dt>
+<dd><p>Generate the fitting parameter file for the specified coordinates.</p>
+<p>This function selects the best-fitting result with the smallest chi-square value
+from the spectral fitting of adjacent column (j+1) and rows (imin to imax)
+in the IFU data and generates the fitting parameter file for the corresponding (i, j) spatial pixel spectrum.</p>
+<section id="id1">
+<h2>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>imin<span class="classifier">int</span></dt><dd><p>The minimum <cite>i</cite> coordinate for the range of adjacent columns to consider.</p>
+</dd>
+<dt>imax<span class="classifier">int</span></dt><dd><p>The maximum <cite>i</cite> coordinate for the range of adjacent columns to consider.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The path to the output directory where the fitting parameter files will be saved.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h2>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<dl>
+<dt>chi2<span class="classifier">float</span></dt><dd><p>The chi-square value of the best-fitting spectrum.</p>
+</dd>
+<dt>par_cube_choosen<span class="classifier"><cite>np.recarray</cite></span></dt><dd><p>The parameter cube corresponding to the best-fitting spectrum.</p>
+</dd>
+<dt>coords<span class="classifier">tuple</span></dt><dd><p>The coordinates <cite>(i_coord, j_coord)</cite> of the best-fitting spectrum.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2>Examples<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chi2</span><span class="p">,</span> <span class="n">par_cube</span><span class="p">,</span> <span class="n">coords</span> <span class="o">=</span> <span class="n">leftward</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_down">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_down</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_down" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for a given row and generate the fitting results.</p>
+<p>This function fits the spectrum of row <cite>i</cite> using the fitting results
+of the neighboring rows in the specified direction.</p>
+<section id="id4">
+<h2>Parameters<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the output results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux_cube<span class="classifier">np.ndarray</span></dt><dd><p>The flux cube containing the spectral data.</p>
+</dd>
+<dt>var_cube<span class="classifier">np.ndarray</span></dt><dd><p>The variance cube of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h2>Returns<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>The function does not return any value but saves the results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h2>Examples<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_down</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_cube</span><span class="p">,</span> <span class="n">var_cube</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">150.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_i">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_i" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for a given row and generate the fitting results.</p>
+<p>This function fits the spectrum of row <cite>i</cite> by using the fitting parameters
+defined in a given parameter file.</p>
+<section id="id7">
+<h2>Parameters<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the output results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux_cube<span class="classifier">np.ndarray</span></dt><dd><p>The flux cube containing the spectral data.</p>
+</dd>
+<dt>var_cube<span class="classifier">np.ndarray</span></dt><dd><p>The variance cube of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h2>Returns<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>The function does not return any value but saves the results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h2>Examples<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_i</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_cube</span><span class="p">,</span> <span class="n">var_cube</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">150.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_i_refit">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_i_refit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fits_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_cube_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cube_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'muse'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_i_refit" title="Link to this definition"></a></dt>
+<dd><p>Fit all spectra using the fitting results of adjacent rows.</p>
+<p>This function applies the fitting results of neighboring rows to refit all spectra.
+The spectra in the range from row <cite>i_1</cite> to row <cite>i_2</cite> are fitted twice.</p>
+<section id="id10">
+<h2>Parameters<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i_1<span class="classifier">int</span></dt><dd><p>The starting row index for the first fitting.</p>
+</dd>
+<dt>i_2<span class="classifier">int</span></dt><dd><p>The starting row index for the second fitting.</p>
+</dd>
+<dt>fits_file<span class="classifier">str</span></dt><dd><p>The path to the input fits file.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift of the target object.</p>
+</dd>
+<dt>scale_factor<span class="classifier">int, optional</span></dt><dd><p>The scale factor for rebinning the IFU spectra. The default is 1.</p>
+</dd>
+<dt>flux_cube_path<span class="classifier">str, optional</span></dt><dd><p>The file path to the flux cube of the IFU data. The default is None.</p>
+</dd>
+<dt>var_cube_path<span class="classifier">str, optional</span></dt><dd><p>The file path to the var cube of the IFU data. The default is None.</p>
+</dd>
+<dt>format<span class="classifier">str, optional</span></dt><dd><p>The format of the input fits file. The default is ‘muse’.</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h2>Returns<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>str</dt><dd><p>The path to the output directory where the results is saved.</p>
+</dd>
+</dl>
+</section>
+<section id="id12">
+<h2>Examples<a class="headerlink" href="#id12" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_i_refit</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;mmt_1.fits&#39;</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;reduced2_flux.npy&#39;</span><span class="p">,</span> <span class="s1">&#39;reduced2_var.npy, &#39;</span><span class="n">muse</span><span class="s1">&#39;)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_j">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_j" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for a given column and generate the fitting results.</p>
+<p>This function fits the spectrum of column <cite>j</cite> by using the fitting parameters
+defined in a given parameter file.</p>
+<section id="id13">
+<h2>Parameters<a class="headerlink" href="#id13" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the output results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux_cube<span class="classifier">np.ndarray</span></dt><dd><p>The flux cube containing the spectral data.</p>
+</dd>
+<dt>var_cube<span class="classifier">np.ndarray</span></dt><dd><p>The variance cube of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id14">
+<h2>Returns<a class="headerlink" href="#id14" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>The function does not return any value but saves the results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id15">
+<h2>Examples<a class="headerlink" href="#id15" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_j</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_cube</span><span class="p">,</span> <span class="n">var_cube</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">150.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_j_refit">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_j_refit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fits_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_cube_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cube_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'muse'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_j_refit" title="Link to this definition"></a></dt>
+<dd><p>Fit all spectra using the fitting results of adjacent columns.</p>
+<p>This function applies the fitting results of neighboring columns to refit all spectra.
+The spectra in the range from column <cite>j_1</cite> to column <cite>j_2</cite> are fitted twice.</p>
+<section id="id16">
+<h2>Parameters<a class="headerlink" href="#id16" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>j_1<span class="classifier">int</span></dt><dd><p>The starting column index for the first fitting.</p>
+</dd>
+<dt>j_2<span class="classifier">int</span></dt><dd><p>The starting column index for the second fitting.</p>
+</dd>
+<dt>fits_file<span class="classifier">str</span></dt><dd><p>The path to the input fits file.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift of the target object.</p>
+</dd>
+<dt>scale_factor<span class="classifier">int, optional</span></dt><dd><p>The scale factor for rebinning the IFU spectra. The default is 1.</p>
+</dd>
+<dt>flux_cube_path<span class="classifier">str, optional</span></dt><dd><p>The file path to the flux cube of the IFU data. The default is None.</p>
+</dd>
+<dt>var_cube_path<span class="classifier">str, optional</span></dt><dd><p>The file path to the var cube of the IFU data. The default is None.</p>
+</dd>
+<dt>format<span class="classifier">str, optional</span></dt><dd><p>The format of the input fits file. The default is ‘muse’.</p>
+</dd>
+</dl>
+</section>
+<section id="id17">
+<h2>Returns<a class="headerlink" href="#id17" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>str</dt><dd><p>The path to the output directory where the results is saved.</p>
+</dd>
+</dl>
+</section>
+<section id="id18">
+<h2>Examples<a class="headerlink" href="#id18" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_i_refit</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;mmt_1.fits&#39;</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;reduced2_flux.npy&#39;</span><span class="p">,</span> <span class="s1">&#39;reduced2_var.npy, &#39;</span><span class="n">csst</span><span class="s1">&#39;)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_left">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_left" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for a given column and generate the fitting results.</p>
+<p>This function fits the spectrum of column <cite>j</cite> using the fitting
+results of the neighboring columns in the specified direction.</p>
+<section id="id19">
+<h2>Parameters<a class="headerlink" href="#id19" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the output results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux_cube<span class="classifier">np.ndarray</span></dt><dd><p>The flux cube containing the spectral data.</p>
+</dd>
+<dt>var_cube<span class="classifier">np.ndarray</span></dt><dd><p>The variance cube of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id20">
+<h2>Returns<a class="headerlink" href="#id20" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>The function does not return any value but saves the results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id21">
+<h2>Examples<a class="headerlink" href="#id21" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_left</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_cube</span><span class="p">,</span> <span class="n">var_cube</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">150.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_right">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_right</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_right" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for a given column and generate the fitting results.</p>
+<p>This function fits the spectrum of column <cite>j</cite> using the fitting results
+of the neighboring columns in the specified direction.</p>
+<section id="id22">
+<h2>Parameters<a class="headerlink" href="#id22" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the output results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux_cube<span class="classifier">np.ndarray</span></dt><dd><p>The flux cube containing the spectral data.</p>
+</dd>
+<dt>var_cube<span class="classifier">np.ndarray</span></dt><dd><p>The variance cube of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id23">
+<h2>Returns<a class="headerlink" href="#id23" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>The function does not return any value but saves the results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id24">
+<h2>Examples<a class="headerlink" href="#id24" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_right</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_cube</span><span class="p">,</span> <span class="n">var_cube</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">150.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_spectrum">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_spectrum" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for the given (i, j) coordinates.</p>
+<p>This function performs spectral fitting for the given row (i) and column (j)
+using the fitting parameters defined in a given parameter file.</p>
+<section id="id25">
+<h2>Parameters<a class="headerlink" href="#id25" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the fitting results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux<span class="classifier">np.ndarray</span></dt><dd><p>The flux array containing the spectral data.</p>
+</dd>
+<dt>err<span class="classifier">np.ndarray</span></dt><dd><p>The error array containing the uncertainty of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id26">
+<h2>Returns<a class="headerlink" href="#id26" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>This function does not return any value but saves the fitting results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id27">
+<h2>Examples<a class="headerlink" href="#id27" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_spectrum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_array</span><span class="p">,</span> <span class="n">err_array</span><span class="p">,</span> <span class="mf">0.064</span><span class="p">,</span> <span class="mf">343.524658</span><span class="p">,</span> <span class="o">-</span><span class="mf">17.58185</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_spectrum_down">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_spectrum_down</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_spectrum_down" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for the given (i, j) coordinates.</p>
+<p>This function performs spectral fitting for the given row (i) and column (j)
+using the best fitting results of the adjacent row (i-1) in the range (jmin-jmax) as initial values.</p>
+<section id="id28">
+<h2>Parameters<a class="headerlink" href="#id28" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the fitting results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux<span class="classifier">np.ndarray</span></dt><dd><p>The flux array containing the spectral data.</p>
+</dd>
+<dt>err<span class="classifier">np.ndarray</span></dt><dd><p>The error array containing the uncertainty of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id29">
+<h2>Returns<a class="headerlink" href="#id29" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>This function does not return any value but saves the fitting results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id30">
+<h2>Examples<a class="headerlink" href="#id30" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_spectrum_down</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_array</span><span class="p">,</span> <span class="n">err_array</span><span class="p">,</span> <span class="mf">0.064</span><span class="p">,</span> <span class="mf">343.524658</span><span class="p">,</span> <span class="o">-</span><span class="mf">17.58185</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_spectrum_left">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_spectrum_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_spectrum_left" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for the given (i, j) coordinates.</p>
+<p>This function performs spectral fitting for the given row (i) and column (j)
+using the best fitting results of the adjacent column (j+1) in the range (imin-imax) as initial values.</p>
+<section id="id31">
+<h2>Parameters<a class="headerlink" href="#id31" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the fitting results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux<span class="classifier">np.ndarray</span></dt><dd><p>The flux array containing the spectral data.</p>
+</dd>
+<dt>err<span class="classifier">np.ndarray</span></dt><dd><p>The error array containing the uncertainty of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id32">
+<h2>Returns<a class="headerlink" href="#id32" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>This function does not return any value but saves the fitting results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id33">
+<h2>Examples<a class="headerlink" href="#id33" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_spectrum_left</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_array</span><span class="p">,</span> <span class="n">err_array</span><span class="p">,</span> <span class="mf">0.064</span><span class="p">,</span> <span class="mf">343.524658</span><span class="p">,</span> <span class="o">-</span><span class="mf">17.58185</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_spectrum_right">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_spectrum_right</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_spectrum_right" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for the given (i, j) coordinates.</p>
+<p>This function performs spectral fitting for the given row (i) and column (j)
+using the best fitting results of the adjacent column (j-1) in the range (imin-imax) as initial values.</p>
+<section id="id34">
+<h2>Parameters<a class="headerlink" href="#id34" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the fitting results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux<span class="classifier">np.ndarray</span></dt><dd><p>The flux array containing the spectral data.</p>
+</dd>
+<dt>err<span class="classifier">np.ndarray</span></dt><dd><p>The error array containing the uncertainty of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id35">
+<h2>Returns<a class="headerlink" href="#id35" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>This function does not return any value but saves the fitting results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id36">
+<h2>Examples<a class="headerlink" href="#id36" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_spectrum_right</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_array</span><span class="p">,</span> <span class="n">err_array</span><span class="p">,</span> <span class="mf">0.064</span><span class="p">,</span> <span class="mf">343.524658</span><span class="p">,</span> <span class="o">-</span><span class="mf">17.58185</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_spectrum_up">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_spectrum_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_spectrum_up" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for the given (i, j) coordinates.</p>
+<p>This function performs spectral fitting for the given row (i) and column (j)
+using the best fitting results of the adjacent row (i+1) in the range (jmin-jmax) as initial values.</p>
+<section id="id37">
+<h2>Parameters<a class="headerlink" href="#id37" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the fitting results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux<span class="classifier">np.ndarray</span></dt><dd><p>The flux array containing the spectral data.</p>
+</dd>
+<dt>err<span class="classifier">np.ndarray</span></dt><dd><p>The error array containing the uncertainty of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id38">
+<h2>Returns<a class="headerlink" href="#id38" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>This function does not return any value but saves the fitting results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id39">
+<h2>Examples<a class="headerlink" href="#id39" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_spectrum_up</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_array</span><span class="p">,</span> <span class="n">err_array</span><span class="p">,</span> <span class="mf">0.064</span><span class="p">,</span> <span class="mf">343.524658</span><span class="p">,</span> <span class="o">-</span><span class="mf">17.58185</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.process_up">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">process_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_ex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.process_up" title="Link to this definition"></a></dt>
+<dd><p>Fit the spectrum for a given row and generate the fitting results.</p>
+<p>This function fits the spectrum of row <cite>i</cite> using the fitting results
+of the neighboring rows in the specified direction.</p>
+<section id="id40">
+<h2>Parameters<a class="headerlink" href="#id40" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The directory path where the output results will be stored.</p>
+</dd>
+<dt>wave<span class="classifier">np.ndarray</span></dt><dd><p>The wavelength array of the spectral data.</p>
+</dd>
+<dt>flux_cube<span class="classifier">np.ndarray</span></dt><dd><p>The flux cube containing the spectral data.</p>
+</dd>
+<dt>var_cube<span class="classifier">np.ndarray</span></dt><dd><p>The variance cube of the spectral data.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The redshift value to apply to the spectral data.</p>
+</dd>
+<dt>ra<span class="classifier">float</span></dt><dd><p>The right ascension coordinate of the target object.</p>
+</dd>
+<dt>dec<span class="classifier">float</span></dt><dd><p>The declination coordinate of the target object.</p>
+</dd>
+<dt>path_ex<span class="classifier">str</span></dt><dd><p>The path to the external FITS file.</p>
+</dd>
+</dl>
+</section>
+<section id="id41">
+<h2>Returns<a class="headerlink" href="#id41" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>None</dt><dd><p>The function does not return any value but saves the results to the specified output path.</p>
+</dd>
+</dl>
+</section>
+<section id="id42">
+<h2>Examples<a class="headerlink" href="#id42" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">process_up</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">wave_array</span><span class="p">,</span> <span class="n">flux_cube</span><span class="p">,</span> <span class="n">var_cube</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">150.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;./path_to_fits/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.rightward">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">rightward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.rightward" title="Link to this definition"></a></dt>
+<dd><p>Generate the fitting parameter file for the specified coordinates.</p>
+<p>This function selects the best-fitting result with the smallest chi-square value
+from the spectral fitting of adjacent column (j-1) and rows (imin to imax)
+in the IFU data and generates the fitting parameter file for the corresponding (i, j) spatial pixel spectrum.</p>
+<section id="id43">
+<h2>Parameters<a class="headerlink" href="#id43" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>imin<span class="classifier">int</span></dt><dd><p>The minimum <cite>i</cite> coordinate for the range of adjacent columns to consider.</p>
+</dd>
+<dt>imax<span class="classifier">int</span></dt><dd><p>The maximum <cite>i</cite> coordinate for the range of adjacent columns to consider.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The path to the output directory where the fitting parameter files will be saved.</p>
+</dd>
+</dl>
+</section>
+<section id="id44">
+<h2>Returns<a class="headerlink" href="#id44" title="Link to this heading"></a></h2>
+<dl>
+<dt>chi2<span class="classifier">float</span></dt><dd><p>The chi-square value of the best-fitting spectrum.</p>
+</dd>
+<dt>par_cube_choosen<span class="classifier"><cite>np.recarray</cite></span></dt><dd><p>The parameter cube corresponding to the best-fitting spectrum.</p>
+</dd>
+<dt>coords<span class="classifier">tuple</span></dt><dd><p>The coordinates <cite>(i_coord, j_coord)</cite> of the best-fitting spectrum.</p>
+</dd>
+</dl>
+</section>
+<section id="id45">
+<h2>Examples<a class="headerlink" href="#id45" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chi2</span><span class="p">,</span> <span class="n">par_cube</span><span class="p">,</span> <span class="n">coords</span> <span class="o">=</span> <span class="n">rightward</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.safe_open_fits">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">safe_open_fits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.safe_open_fits" title="Link to this definition"></a></dt>
+<dd><p>安全地打开FITS文件。</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>file_path (str): FITS文件路径</p>
+</dd>
+<dt>Returns:</dt><dd><p>fits.HDU 或 None: 如果文件存在返回FITS数据,否则返回None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elfo.upward">
+<span class="sig-prename descclassname"><span class="pre">elfo.</span></span><span class="sig-name descname"><span class="pre">upward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jmin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jmax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elfo.upward" title="Link to this definition"></a></dt>
+<dd><p>Generate the fitting parameter file for the specified coordinates.</p>
+<p>This function selects the best-fitting result with the smallest chi-square value
+from the spectral fitting of adjacent row (i+1) and columns (jmin to jmax)
+in the IFU data and generates the fitting parameter file for the corresponding (i, j) spatial pixel spectrum.</p>
+<section id="id46">
+<h2>Parameters<a class="headerlink" href="#id46" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>i<span class="classifier">int</span></dt><dd><p>The row index for the current spectrum.</p>
+</dd>
+<dt>j<span class="classifier">int</span></dt><dd><p>The column index for the current spectrum.</p>
+</dd>
+<dt>jmin<span class="classifier">int</span></dt><dd><p>The minimum <cite>j</cite> coordinate for the range of adjacent columns to consider.</p>
+</dd>
+<dt>jmax<span class="classifier">int</span></dt><dd><p>The maximum <cite>j</cite> coordinate for the range of adjacent columns to consider.</p>
+</dd>
+<dt>path_out<span class="classifier">str</span></dt><dd><p>The path to the output directory where the fitting parameter files will be saved.</p>
+</dd>
+</dl>
+</section>
+<section id="id47">
+<h2>Returns<a class="headerlink" href="#id47" title="Link to this heading"></a></h2>
+<dl>
+<dt>chi2<span class="classifier">float</span></dt><dd><p>The chi-square value of the best-fitting spectrum.</p>
+</dd>
+<dt>par_cube_choosen<span class="classifier"><cite>np.recarray</cite></span></dt><dd><p>The parameter cube corresponding to the best-fitting spectrum.</p>
+</dd>
+<dt>coords<span class="classifier">tuple</span></dt><dd><p>The coordinates <cite>(i_coord, j_coord)</cite> of the best-fitting spectrum.</p>
+</dd>
+</dl>
+</section>
+<section id="id48">
+<h2>Examples<a class="headerlink" href="#id48" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chi2</span><span class="p">,</span> <span class="n">par_cube</span><span class="p">,</span> <span class="n">coords</span> <span class="o">=</span> <span class="n">upward</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;./output/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api.html" class="btn btn-neutral float-left" title="API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Hui Guo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

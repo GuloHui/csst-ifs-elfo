@@ -16,9 +16,9 @@ Welcome to csst-ifs-elfo's documentation!
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :caption: Algorithm
+   :caption: API
 
-   example
+   api/api.rst
 
 
 Indices and tables
