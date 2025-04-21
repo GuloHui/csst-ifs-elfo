@@ -7,7 +7,6 @@
 
 
 .. image:: figures/logo.png
-    :width: 600px
     :height: 200px
     :align: center
     :alt: ELFO logo
