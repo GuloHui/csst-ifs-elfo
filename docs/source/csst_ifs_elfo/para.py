@@ -1,17 +1,4 @@
-"""
-Identifier:     csst_ifs_elfo/para.py
-Name:           para.py
-Description:    用拟合结果生成拟合初始猜测文件qsopar_i_j.fits
-Author:         Hui Guo
-Created:        2025-02-08
-Modified-History:
-    2025-02-08, created
-"""
-
-from astropy.io import fits
 import numpy as np
-from astropy.table import Table
-import os
 
 
 def create_qsopar(i: int, j: int, par_cube: np.ndarray):

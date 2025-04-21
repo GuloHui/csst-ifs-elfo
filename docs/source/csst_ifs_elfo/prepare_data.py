@@ -1,15 +1,4 @@
-"""
-Identifier:     csst_ifs_elfo/prepare_data.py
-Name:           prepare_data
-Description:    合并IFU光谱
-Author:         Hui Guo
-Created:        2025-02-08
-Modified-History:
-    2025-02-08, created
-"""
-from astropy.io import fits
 import numpy as np
-
 
 def combine_pixels(ifu_data: np.ndarray, scale_factor: int):
     """

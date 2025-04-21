@@ -1194,7 +1194,7 @@ def process_up(i: int, path_out: str, wave: np.ndarray, flux_cube: np.ndarray, v
     return elapsed_time_i
 
 
-def process_i_refit(i_1, i_2, fits_file, z, scale_factor=1, flux_cube_path=None, var_cube_path=None, format='muse'):
+def process_i_refit(i_1: int, i_2: int, fits_file: str, z: float, scale_factor: int = 1, flux_cube_path: str = None, var_cube_path: str = None, format: str = 'muse'):
     """
     Fit all spectra using the fitting results of adjacent rows.
 
@@ -1313,7 +1313,7 @@ def process_i_refit(i_1, i_2, fits_file, z, scale_factor=1, flux_cube_path=None,
     return path_out
 
 
-def process_j_refit(j_1, j_2, fits_file, z, scale_factor=1, flux_cube_path=None, var_cube_path=None, format='muse'):
+def process_j_refit(j_1: int, j_2: int, fits_file: str, z: float, scale_factor: int = 1, flux_cube_path: str = None, var_cube_path: str = None, format: str = 'muse'):
     """
     Fit all spectra using the fitting results of adjacent columns.
 

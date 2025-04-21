@@ -1,0 +1,5 @@
+para
+====
+
+.. automodule:: para
+   :members:

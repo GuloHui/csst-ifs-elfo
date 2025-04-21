@@ -1,5 +1,0 @@
-elfo
-======
-
-.. automodule:: elfo
-	:members:
