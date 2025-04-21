@@ -34,6 +34,7 @@ release = '0.0.1'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'nbsphinx'
     # 其他扩展
 ]
 
@@ -61,5 +62,5 @@ html_static_path = ['_static']
 html_logo = "figures/logo.png"
 
 html_theme_options = {
-    'logo_only': True
+    'logo_only': False
 }

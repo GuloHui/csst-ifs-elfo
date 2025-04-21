@@ -8,6 +8,7 @@
 
 .. image:: figures/logo.png
     :width: 600px
+    :height: 200px
     :align: center
     :alt: ELFO logo
 
@@ -45,7 +46,9 @@ it easy to apply to other quasar lines or to emission‐line fitting in any othe
    :maxdepth: 2
    :caption: Usage
 
-   installation
+
+   Usage
+   Selection
    
 
 
@@ -62,6 +65,7 @@ it easy to apply to other quasar lines or to emission‐line fitting in any othe
    api/elfo.rst
    api/para.rst
    api/prepare_data.rst
+   
 
 |
 
