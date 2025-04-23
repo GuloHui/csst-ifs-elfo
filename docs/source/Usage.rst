@@ -39,9 +39,10 @@ Import the  functions from **csst-ifs-elfo** to perform the fitting:
   from csst_ifs_elfo import process_i_refit
   from csst_ifs_elfo import process_j_refit
 
-The fitting of the IFS data is performed using the two imported functions.  
+The fitting of the IFS data is performed using the two imported functions. 
 In the following, we take ``process_i_refit`` as an example, which fits all spectra using the fitting results of adjacent rows.  
-For a detailed description of the fitting strategy, see the :ref:`workflow` section below.
+For a detailed description of the fitting strategy, see the :ref:`workflow` section below, where we explain how ELFO's ``process_i_refit`` 
+function specifically fits the IFS data.
 
 
 
@@ -59,7 +60,6 @@ For a detailed description of the fitting strategy, see the :ref:`workflow` sect
 **Returns**
 
 - ``str``: The path to the output directory where the results are saved.
-
 
 
 Run the Fitting
