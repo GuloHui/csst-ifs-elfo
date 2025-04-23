@@ -73,7 +73,7 @@ Fitting Flow
 
 
 A simple summary of ``process_i_refit`` 's fitting is that it first fits half of the spectra from bottom to top, and then fits the other half from top to bottom. 
-The following diagram illustrates the fitting sequence when ``x0`` < ``x1`` — it might help make things clearer.
+The following diagrams illustrates the fitting sequence when ``x0`` < ``x1`` — it might help make things clearer.
 
 
 
@@ -83,23 +83,33 @@ The following diagram illustrates the fitting sequence when ``x0`` < ``x1`` — 
 
     ELFO workflow
 
+.. figure:: figures/sequence.png
+    :height: 200px
+    :align: center
+
+    Schematic diagram of the fitting sequence for IFS data. The arrows in the left panel indicate the fitting order: step ① is executed first, followed by step ②.
+
 
 
 ``process_j_refit``
 ************************
 
 
-
-**Left-to-right and right-to-left fitting** 
-
-- The process works similarly on the columns.
-- Each pixel uses the best nearby fit as its initial guess.
-
-Goal
-----
-
-Ensure every pixel’s spectrum is fitted more robustly by leveraging information from spatially neighboring fits.
+The fitting procedure is the same as in process_i_refit, 
+except that it is applied along the column (``j``) direction instead of the row (``i``) direction.
+That is, the spectra are fitted column by column, either from left to right or right to left, 
+depending on the relative positions of y0 and y1.
+Each pixel is still fitted using the best-fit result (with the lowest :math:`\chi^2_{\mathrm{red}})` 
+from its neighboring pixels as the initial guess.
 
 
 
+
+
+Expected output:
+-----------------
+
+The function will automatically save the fitting results to the returned path (``path_out``).
+For each spectrum, `pyqsofit`_ generates a ``.fits`` file with the fitted parameters and a ``.pdf`` showing the fitting result.
+The initial guess for each emission-line fit is derived from the best-fit result of a nearby pixel.
 

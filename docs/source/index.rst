@@ -64,6 +64,14 @@ it easy to apply to other quasar lines or to emission‐line fitting in any othe
    api/elfo.rst
    api/para.rst
    api/prepare_data.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Additional Notes / More Details
+
+   notes
+
+   
    
 
 |

@@ -52,6 +52,16 @@ Repeat
 Repeat steps **Select Valid Results** and **Fill Missing Point** until the set number of iterations is reached. In this way, the result 
 obtained for each pixel is considered spatially continuous.
 
+
+
+.. figure:: figures/selectionflow.png
+    :height: 200px
+    :align: center
+
+    Selection flowchart
+
+
+
 |
 
 -------
