@@ -42,7 +42,7 @@ Fitting Flow
 ``x0`` ---> edge fitting
 
 
-- Row ``x0`` is fitted with default initial guesses.
+- Row ``x0`` is fitted with default initial guesses. see `example`_
 - When fitting specific pixels in row ``x0 + 1``, the initial guess for the emission-line fit is taken from the result with the smallest :math:`\chi^2_{\mathrm{red}}` value among the emission-line fits of the ``k`` neighboring pixels in row ``x0``.
 - The process repeats until the edge of the data is reached.
 
@@ -98,7 +98,7 @@ The following diagrams illustrates the fitting sequence when ``x0`` < ``x1`` —
 The fitting procedure is the same as in process_i_refit, 
 except that it is applied along the column (``j``) direction instead of the row (``i``) direction.
 That is, the spectra are fitted column by column, either from left to right or right to left, 
-depending on the relative positions of y0 and y1.
+depending on the relative positions of ``y0`` and ``y1``.
 Each pixel is still fitted using the best-fit result (with the lowest :math:`\chi^2_{\mathrm{red}})` 
 from its neighboring pixels as the initial guess.
 
@@ -110,6 +110,6 @@ Expected output
 -----------------
 
 The function will automatically save the fitting results to the returned path (``path_out``).
-For each spectrum, `pyqsofit`_ generates a ``.fits`` file with the fitted parameters and a ``.pdf`` showing the fitting result.
+For each spectrum, `PyQSOFit`_ generates a ``.fits`` file with the fitted parameters and a ``.pdf`` showing the fitting result.
 The initial guess for each emission-line fit is derived from the best-fit result of a nearby pixel.
 

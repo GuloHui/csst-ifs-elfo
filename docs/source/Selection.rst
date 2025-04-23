@@ -36,7 +36,7 @@ For each set of emission line fitting results, if the difference between the vel
 initial velocity map is within the range of ``f1*sigma0``, and the velocity broadening of the :math:`\text{H}\alpha` narrow component is 
 less than ``f2*sigma0``, it is selected; otherwise, it is excluded. Here, ``f1`` and ``f2`` are user-defined parameters. If multiple results 
 are selected for a single pixel, the one with the smallest sum of absolute differences from the surrounding results, i.e., the one with the 
-most continuous fitting, is automatically chosen."
+most continuous fitting, is automatically chosen.
 
 
 Fill Missing Point

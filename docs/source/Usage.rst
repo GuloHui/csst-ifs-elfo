@@ -29,15 +29,17 @@ Import Necessary Functions
 
 Import the  functions from **csst-ifs-elfo** to perform the fitting:
 
-.. note:: 
-  Both functions share the same fitting logic, fitting the spectra column by column.  
-  The only difference lies in the direction of progression  ``process_i_refit`` proceeds along rows,  
-  while ``process_j_refit`` proceeds along columns.
+
    
 .. code-block:: python
 
   from csst_ifs_elfo import process_i_refit
   from csst_ifs_elfo import process_j_refit
+
+.. note:: 
+  Both functions share the same fitting logic, fitting the spectra column by column.  
+  The only difference lies in the direction of progression  ``process_i_refit`` proceeds along rows,  
+  while ``process_j_refit`` proceeds along columns.
 
 The fitting of the IFS data is performed using the two imported functions. 
 In the following, we take ``process_i_refit`` as an example, which fits all spectra using the fitting results of adjacent rows.  
@@ -76,7 +78,7 @@ Once the IFS data is ready and the functions are imported, we can run the fittin
     path_out = process_i_refit(i_1=80, i_1=90, fits_file='example.fits', z=0.02, scale_factor=2, flux_cube_path='reduced2_flux.npy', var_cube_path='reduced2_var.npy', format='csst')
 
 The function will automatically save the fitting results to the returned path (``path_out``).  
-For each spectrum,  `pyqsofit`_ generates a ``.fits`` file with parameters and a ``.pdf`` showing the fitting result.
+For each spectrum,  `PyQSOFit`_ generates a ``.fits`` file with parameters and a ``.pdf`` showing the fitting result.
 More details on the fitting process can be found in the :ref:`workflow` section below.
 
 |
