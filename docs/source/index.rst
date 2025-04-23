@@ -28,7 +28,7 @@ fitting in integral‐field spectroscopy (IFS) data taken with the Chinese Space
 
 
 **ELFO** uses `PyQSOFit`_ to fit each spectrum individually and leverages the spatial correlation inherent in 
-IFU data—stemming from the continuity of physical 
+IFS data—stemming from the continuity of physical 
 processes across neighboring spaxels—to improve emission‑line fitting.
 `PyQSOFit`_ employs the Levenberg–Marquardt least‐squares algorithm, and choosing appropriate initial guesses 
 for the model parameters is critical. **ELFO** processes spectra in a user‑defined spatial sequence, 

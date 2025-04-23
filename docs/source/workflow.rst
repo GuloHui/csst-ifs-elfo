@@ -29,7 +29,7 @@ User-defined Parameters
 - **Fitting start columns**: ``y0``, ``y1`` (correspond to ``j_1`` and ``j_2`` in ``process_i_refit``)
 - **Neighborhood range**: ``k`` (number of nearby pixels to consider, default is 9.  
   This value is hard-coded for simplicity and not exposed as a function parameter.  
-  If you need to modify it, feel free to contact me.)
+  If you need to modify it, you can directly modify the **Elfo** code or contact me for help.)
 
 Fitting Flow
 ------------
@@ -106,7 +106,7 @@ from its neighboring pixels as the initial guess.
 
 
 
-Expected output:
+Expected output
 -----------------
 
 The function will automatically save the fitting results to the returned path (``path_out``).
