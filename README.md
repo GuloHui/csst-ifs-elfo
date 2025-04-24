@@ -10,6 +10,9 @@ A program that uses the fitting results of adjacent points to improve the IFU sp
 
 **ELFO** (Emission Line Fitting Optimization) is a Python package designed to improve emission‐line 
 fitting in integral‐field spectroscopy (IFS) data taken with the Chinese Space Station Telescope (CSST‑IFS).
+
+
+
 -------------
 
 **ELFO** uses [PyQSOFit] to fit each spectrum individually and leverages the spatial correlation inherent in 
