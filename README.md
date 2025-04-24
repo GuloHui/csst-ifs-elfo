@@ -13,7 +13,10 @@ fitting in integral‐field spectroscopy (IFS) data taken with the Chinese Space
 
 
 
+
 -------------
+
+
 
 **ELFO** uses [PyQSOFit] to fit each spectrum individually and leverages the spatial correlation inherent in 
 IFS data—stemming from the continuity of physical 
@@ -45,5 +48,11 @@ it easy to apply to other quasar lines or to emission‐line fitting in any othe
 
 
 
-----------
-[PyQSOFit]:  https://github.com/legolason/PyQSOFit
+
+
+
+
+
+
+
+[PyQSOFit]:https://github.com/legolason/PyQSOFit
