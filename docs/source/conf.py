@@ -34,7 +34,8 @@ release = '0.0.1'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'nbsphinx'
+    'nbsphinx',
+    "sphinxcontrib.googleanalytics"
     # 其他扩展
 ]
 
@@ -45,6 +46,9 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
+
+
+googleanalytics_id = "G-04L0MKZY3T"
 
 
 # -- Options for HTML output -------------------------------------------------
