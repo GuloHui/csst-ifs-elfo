@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: elfo
+Version: 0.1.0
+Summary: The CSST pipeline - IFS elfo
+Home-page: https://github.com/GuloHui/csst-ifs-elfo
+Author: Hui Guo
+Author-email: guohui@mail.ustc.edu.cn
+License: GNU General Public License v3.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astropy==6.0.0
+Requires-Dist: fonttools==4.25.0
+Requires-Dist: lmfit==1.2.2
+Requires-Dist: matplotlib==3.8.3
+Requires-Dist: multiprocess==0.70.17
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pyastronomy==0.19.0
+Requires-Dist: scipy==1.12.0
+Requires-Dist: sfdmap2==0.2.2.post3
+Requires-Dist: tqdm==4.66.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# csst-ifs-elfo
+
+<div align="center">
+  <img src="docs/source/figures/logo.jpg" alt="img" width="600"/>
+</div>
+
+**ELFO** (Emission Line Fitting Optimization) is a Python package for emission line fitting optimization in integral field spectroscopy data, based on [PyQSOFit]. It is designed for integral‐field spectroscopy (IFS) data taken with the Chinese Space Station Telescope (CSST‑IFS).
+
+---
+**ELFO** uses the results of neighboring spectra to determine initial guesses and selects the most spatially smooth solutions from multiple fitting attempts. The method has already been validated to CSST’s simulated IFS data and with slight modifications, it can be applied to other IFS data and different emission lines.
+
+**See our full documentation at [csst-ifs-elfo.readthedocs.io](https://csst-ifs-elfo.readthedocs.io).**
+
+A detailed description of the method and its applications has been presented in
+
+[PyQSOFit]: https://github.com/legolason/PyQSOFit
