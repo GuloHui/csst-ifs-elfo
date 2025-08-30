@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('./csst_ifs_elfo/'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'csst-ifs-elfo'
+project = 'csst_ifs_elfo'
 copyright = '2025, Hui Guo'
 author = 'Hui Guo'
 
