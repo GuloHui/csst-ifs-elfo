@@ -15,7 +15,7 @@ with open("requirements.txt", "r") as f:
 
 # 配置、安装
 setuptools.setup(
-    name="csst_ifs_elfo",  # 包名
+    name="csst-ifs-elfo",  # 包名
     version="0.1.0",  # 版本号
     author="Hui Guo",  # 作者
     author_email="guohui@mail.ustc.edu.cn",  # 邮箱

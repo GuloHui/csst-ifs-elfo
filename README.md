@@ -1,4 +1,4 @@
-# csst_ifs_elfo
+# csst-ifs-elfo
 
 <div align="center">
   <img src="docs/source/figures/logo.jpg" alt="img" width="600"/>
