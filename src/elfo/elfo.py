@@ -14,7 +14,7 @@ from astropy.io import fits
 import numpy as np
 import os.path
 import os
-from csst_ifs_elfo.para import create_qsopar
+from elfo.para import create_qsopar
 # import shutil  # 用于文件复制操作
 
 

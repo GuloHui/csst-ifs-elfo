@@ -23,7 +23,7 @@ setuptools.setup(
     long_description=long_description,  # 长描述
     long_description_content_type="text/markdown",  # 长描述类型
     url="https://github.com/GuloHui/csst-ifs-elfo",  # 主页
-    packages=["src/csst_ifs_elfo"],  # 用setuptools工具自动发现带有__init__.py的包
+     # 用setuptools工具自动发现带有__init__.py的包
     license="GNU General Public License v3.0",  # 证书类型
     classifiers=[  # 程序分类, 参考 https://pypi.org/classifiers/
         # How mature is this project?
@@ -32,15 +32,17 @@ setuptools.setup(
         #   5 - Production/Stable
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
         "Topic :: Scientific/Engineering :: Physics",
         "Topic :: Scientific/Engineering :: Astronomy",
     ],
     include_package_data=True,  # 设置包含随包数据
-    package_data={  # 具体随包数据路径
-        },
+    package_dir={"elfo": "src/elfo"},  # 包路径
+    packages=["elfo"], 
+    package_data={ # ✅ 放到列表里
+},
+
     # 请注意检查，防止临时文件或其他不必要的文件被提交到仓库，否则会一同安装
     python_requires=">=3.11",  # Python版本要求
     install_requires=requirements,

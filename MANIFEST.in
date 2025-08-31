@@ -1,1 +1,1 @@
-recursive-include src/csst_ifs_elfo *
+recursive-include src/elfo *
