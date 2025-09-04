@@ -390,7 +390,7 @@ def process_spectrum(i: int, j: int, path_out: str, wave: np.ndarray, flux: np.n
                   Fe_uv_op=True, poly=True, BC=False, initial_guess=None,
                   rej_abs_conti=False,
                   linefit=True, rej_abs_line=False, MC=False, MCMC=False,
-                  param_file_name='qsopar_muse.fits',
+                  param_file_name='qsopar_std.fits',
                   save_result=True, save_fits_path=path_out, plot_fig=True,
                   save_fig=True,
                   verbose=False,
