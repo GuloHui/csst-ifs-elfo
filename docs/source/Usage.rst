@@ -71,7 +71,7 @@ function specifically fits the IFS data.
 
 Set up the model input parameters
 ----------------------------------
-See an example in the `PyQSOFit`_ documentation.
+See an example in the `example`_ notbook.
 
 
 

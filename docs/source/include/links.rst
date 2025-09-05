@@ -20,4 +20,4 @@
 .. PyQSOFit
 .. _PyQSOFit: https://github.com/legolason/PyQSOFit
 
-.. _example: https://github.com/legolason/PyQSOFit/blob/master/example/example.ipynb
+.. _example: https://github.com/GuloHui/csst-ifs-elfo/blob/main/example/example.ipynb
