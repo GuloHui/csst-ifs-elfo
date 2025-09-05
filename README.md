@@ -1,7 +1,7 @@
 # csst-ifs-elfo
 
 <div align="center">
-  <img src="docs/source/figures/logo.jpg" alt="img" width="600"/>
+  <img src="docs/source/figures/logo.png" alt="img" width="600"/>
 </div>
 
 **ELFO** (Emission Line Fitting Optimization) is a Python package for emission line fitting optimization in integral field spectroscopy data, based on [PyQSOFit]. It is designed for integral‐field spectroscopy (IFS) data taken with the Chinese Space Station Telescope (CSST‑IFS).
