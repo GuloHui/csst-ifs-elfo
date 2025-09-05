@@ -50,6 +50,11 @@ exclude_patterns = []
 
 googleanalytics_id = "G-04L0MKZY3T"
 
+highlight_options = {
+    "python": {"linenos": False},
+    "console": {"linenos": False},
+    "bash": {"linenos": False},
+}
 
 # -- Options for HTML output -------------------------------------------------
 

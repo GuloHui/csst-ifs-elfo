@@ -15,16 +15,21 @@ Installation
 -------------
 
 
+**csst-ifs-elfo** can be installed as follows:
 
-**csst-ifs-elfo** can be installed as follows::
+.. code-block:: console
 
   git clone https://csst-tb.bao.ac.cn/code/csst-pipeline/ifs/csst_ifs_elfo.git
+  cd csst-ifs-elfo
+  python -m pip install .
+
 
 Prepare the IFS data
 ----------------------
 The IFS simulated observation data from CSST can be downloaded from the following link: `Download <http://202.127.29.3/~shen/NGC3359/>`_.
 
-Import Necessary Functions
+Import Required Modules and Functions
+
 --------------------------
 
 Import the  functions from **csst-ifs-elfo** to perform the fitting:
@@ -33,8 +38,8 @@ Import the  functions from **csst-ifs-elfo** to perform the fitting:
    
 .. code-block:: python
 
-  from csst_ifs_elfo import process_i_refit
-  from csst_ifs_elfo import process_j_refit
+  from elfo import process_i_refit
+  from elfo import process_j_refit
 
 .. note:: 
   Both functions share the same fitting logic, fitting the spectra column by column.  
@@ -62,6 +67,12 @@ function specifically fits the IFS data.
 **Returns**
 
 - ``str``: The path to the output directory where the results are saved.
+
+
+Set up the model input parameters
+----------------------------------
+See an example in the `PyQSOFit`_ documentation.
+
 
 
 Run the Fitting
