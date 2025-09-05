@@ -14,11 +14,11 @@
 
 **csst-ifs-elfo** can be installed as follows:
 
-``git clone https://github.com/GuloHui/csst-ifs-elfo```<br>`
+``git clone https://github.com/GuloHui/csst-ifs-elfo``<br>
 
-``cd csst-ifs-elfo```<br>`
+``cd csst-ifs-elfo``<br>
 
-``python -m pip install .```<br>`
+``python -m pip install .``<br>
 
 ## Usage
 
@@ -28,4 +28,4 @@ A brief example of how to use **ELFO** is shown in [example][example] notebook.
 A detailed description of the method and its applications has been presented in
 
 [PyQSOFit]: https://github.com/legolason/PyQSOFit
-[example]:https://github.com/GuloHui/csst-ifs-elfo/blob/main/example/example.ipynb
+[example]: https://github.com/GuloHui/csst-ifs-elfo/blob/main/example/example.ipynb
