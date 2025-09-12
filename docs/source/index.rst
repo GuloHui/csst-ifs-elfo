@@ -6,7 +6,7 @@
 
 
 
-.. image:: figures/logo.jpg
+.. image:: figures/logo.png
     :height: 200px
     :align: center
     :alt: ELFO logo
@@ -85,6 +85,16 @@ it easy to apply to other quasar lines or to emission‐line fitting in any othe
 
 
 ----
+
+
+Acknowledgments
+===============
+
+This project is supported by the CSST scientific data processing and analysis system of the China Manned Space Project and Shanghai Academic/Technology Research Leader (22XD1404200).
+
+
+
+
 
 
 |
