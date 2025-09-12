@@ -81,7 +81,7 @@ it easy to apply to other quasar lines or to emission‐line fitting in any othe
 :Author: Hui Guo
 :Institute: university of science and technology of china
 :Contact: guohui@mail.ustc.edu.cn
-:Last updated: 2025-04
+:Last updated: 2025-09
 
 
 ----
