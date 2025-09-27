@@ -12,11 +12,14 @@
 
 **csst-ifs-elfo** can be installed as follows:
 
-``git clone https://github.com/GuloHui/csst-ifs-elfo```<br>`
+``git clone https://github.com/GuloHui/csst-ifs-elfo``
 
-``cd csst-ifs-elfo```<br>`
+``cd csst-ifs-elfo``
 
-``python -m pip install .```<br>`
+``python -m pip install .``
+
+
+``git clone https://github.com/legolason/PyQSOFit``<br>
 
 ## Usage
 
