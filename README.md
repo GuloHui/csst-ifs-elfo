@@ -19,8 +19,6 @@
 ``python -m pip install .``
 
 
-``git clone https://github.com/legolason/PyQSOFit``<br>
-
 ## Usage
 
 A brief example of how to use **ELFO** is shown in [example][example] notebook.
